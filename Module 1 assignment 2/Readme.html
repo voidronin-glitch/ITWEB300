@@ -1,1 +1,56 @@
+# Support Ticket System (OOP-Based)
+
+This project is a simple web application that allows users to submit IT support tickets and search for existing tickets using Object-Oriented Programming concepts in JavaScript.
+
+## Repository Structure
+
+```
+.
+├── index.html             # Main webpage with form and search
+├── style.css              # Styles for the layout
+├── User.js                # User class
+├── SupportTicket.js       # SupportTicket class
+├── TicketManager.js       # TicketManager class
+└── README.md              # This file
+```
+
+## Class Overview
+
+### 1. User
+- Represents a user submitting or searching for a support ticket.
+- **Variables:** name, email
+- **Methods:**
+  - `getUserInfo()` – returns user data
+
+### 2. SupportTicket
+- Represents a support ticket entry.
+- **Variables:** ticketId, user, issue, status, createdAt
+- **Methods:**
+  - `getSummary()` – returns formatted ticket info
+  - `closeTicket()` – changes status to closed
+
+### 3. TicketManager
+- Manages all support tickets.
+- **Variables:** tickets (array)
+- **Methods:**
+  - `addTicket(ticket)`
+  - `findTicketsByName(name)`
+  - `findTicketById(id)`
+  - `listOpenTickets()`
+
+##  How to Use
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/YourGitHubUsername/support-ticket-oop.git
+   ```
+2. Open `index.html` in your browser.
+3. Fill out the form to submit a support ticket.
+4. Use the search input to find existing tickets by name or ticket ID.
+
+##  Notes
+- All ticket data is stored in-memory in the browser (no backend integration).
+- Server interaction is commented as placeholders for future implementation.
+
+##  Author Experience
+This project reinforced key OOP principles like encapsulation and separation of concerns. It was insightful to impliment a previous functional design into a class-based architecture.
 
