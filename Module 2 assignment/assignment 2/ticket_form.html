@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>IT Support Ticket Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+    }
+    form {
+      max-width: 500px;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+    label {
+      display: block;
+      margin-top: 15px;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+    }
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      cursor: pointer;
+    }
+  </style>
+  <script>
+    function validateInputForm(form) {
+      // ReqDate: required, mm/dd/yyyy format
+      const reqDate = form.ReqDate.value.trim();
+      const dateRegex = /^(0[1-9]|1[0-2])\/(0[1-9]|[12]\d|3[01])\/\d{4}$/;
+      if (!reqDate) {
+        alert("Request Date is required.");
+        return false;
+      }
+      if (!dateRegex.test(reqDate)) {
+        alert("Request Date must be in mm/dd/yyyy format.");
+        return false;
+      }
+
+      // EmpID: required, 6 characters, capital letter + 5 digits
+      const empID = form.EmpID.value.trim();
+      const empIDRegex = /^[A-Z][0-9]{5}$/;
+      if (!empID) {
+        alert("Employee ID is required.");
+        return false;
+      }
+      if (!empIDRegex.test(empID)) {
+        alert("Employee ID must start with a capital letter followed by 5 digits (e.g., A12345).");
+        return false;
+      }
+
+      // First Name: required, starts with capital letter
+      const fName = form.FName.value.trim();
+      const nameRegex = /^[A-Z][a-zA-Z]*$/;
+      if (!fName) {
+        alert("First Name is required.");
+        return false;
+      }
+      if (!nameRegex.test(fName)) {
+        alert("First Name must start with a capital letter and contain only letters.");
+        return false;
+      }
+
+      // Last Name: required, starts with capital letter
+      const lName = form.LName.value.trim();
+      if (!lName) {
+        alert("Last Name is required.");
+        return false;
+      }
+      if (!nameRegex.test(lName)) {
+        alert("Last Name must start with a capital letter and contain only letters.");
+        return false;
+      }
+
+      // Problem Description: required
+      const probDesc = form.ProbDesc.value.trim();
+      if (!probDesc) {
+        alert("Problem Description is required.");
+        return false;
+      }
+
+      // All checks passed
+      return true;
+    }
+  </script>
+</head>
+<body>
+
+  <h2>IT Support Ticket Submission</h2>
+
+  <form name="ticketForm" onsubmit="return validateInputForm(this);">
+    <label for="ReqDate">Request Date (mm/dd/yyyy):</label>
+    <input type="text" id="ReqDate" name="ReqDate" placeholder="e.g. 08/08/2025">
+
+    <label for="EmpID">Employee ID (Format: A12345):</label>
+    <input type="text" id="EmpID" name="EmpID" placeholder="e.g. B45678">
+
+    <label for="FName">First Name:</label>
+    <input type="text" id="FName" name="FName" placeholder="e.g. John">
+
+    <label for="LName">Last Name:</label>
+    <input type="text" id="LName" name="LName" placeholder="e.g. Doe">
+
+    <label for="ProbDesc">Problem Description:</label>
+    <textarea id="ProbDesc" name="ProbDesc" rows="4" placeholder="Describe your issue..."></textarea>
+
+    <button type="submit">Submit Ticket</button>
+  </form>
+
+</body>
+</html>
