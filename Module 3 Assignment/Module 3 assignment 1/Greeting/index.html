@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login Greeting</title>
+  <style>
+    #greeting { display: none; color: green; font-weight: bold; }
+  </style>
+</head>
+<body>
+  <input type="text" id="username" placeholder="Enter username">
+  <input type="password" id="password" placeholder="Enter password">
+  <button onclick="login()">Login</button>
+
+  <div id="greeting"></div>
+
+  <script>
+    function login() {
+      const user = document.getElementById("username").value;
+      const pass = document.getElementById("password").value;
+
+      // Fake check
+      if(user === "admin" && pass === "1234") {
+        const greet = document.getElementById("greeting");
+        greet.innerText = "Hello " + user;
+        greet.style.display = "block";
+      } else {
+        showError();
+      }
+    }
+
+    function showError() {
+      alert("Invalid login. Try again.");
+      document.getElementById("username").value = "";
+      document.getElementById("password").value = "";
+    }
+  </script>
+</body>
+</html>

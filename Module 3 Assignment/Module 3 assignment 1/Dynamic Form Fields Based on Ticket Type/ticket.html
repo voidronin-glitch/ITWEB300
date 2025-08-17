@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Support Ticket</title>
+</head>
+<body>
+  <label for="ticketType">Choose ticket type:</label>
+  <select id="ticketType">
+    <option value="">--Select--</option>
+    <option value="computer">Computer</option>
+    <option value="software">Software</option>
+    <option value="network">Network</option>
+  </select>
+
+  <div id="computerFields" style="display:none;">
+    <label>Computer Model: <input type="text"></label>
+  </div>
+
+  <div id="softwareFields" style="display:none;">
+    <label>Software Name: <input type="text"></label>
+  </div>
+
+  <div id="networkFields" style="display:none;">
+    <label>IP Address: <input type="text"></label>
+  </div>
+
+  <script src="ticket.js"></script>
+</body>
+</html>
