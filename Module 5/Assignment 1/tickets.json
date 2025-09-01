@@ -1,0 +1,20 @@
+{
+  "12345": {
+    "requestDate": "2025-08-30",
+    "employeeID": "E102",
+    "userFirstName": "Sarah",
+    "userLastName": "Lee",
+    "problemDescription": "Printer not working",
+    "status": "Open",
+    "response": "Technician assigned"
+  },
+  "67890": {
+    "requestDate": "2025-08-29",
+    "employeeID": "E207",
+    "userFirstName": "John",
+    "userLastName": "Smith",
+    "problemDescription": "Cannot login",
+    "status": "Closed",
+    "response": "Password reset"
+  }
+}

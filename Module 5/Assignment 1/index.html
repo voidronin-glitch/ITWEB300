@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>IT Support Ticket Viewer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background: #f4f4f4;
+        }
+        h1 {
+            color: #333;
+        }
+        .ticket-container {
+            background: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            max-width: 500px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        label, .ticket-field {
+            display: block;
+            margin: 8px 0;
+        }
+        #loadBtn {
+            margin-top: 10px;
+            padding: 8px 12px;
+            background: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        #loadBtn:hover {
+            background: #0056b3;
+        }
+        .ticket-field span {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>IT Support Ticket Lookup</h1>
+    <div class="ticket-container">
+        <label for="ticketInput">Enter Ticket Number:</label>
+        <input type="text" id="ticketInput" placeholder="e.g., 12345">
+        <button id="loadBtn">Load Ticket</button>
+
+        <hr>
+
+        <div class="ticket-field">Request Date: <span id="requestDate"></span></div>
+        <div class="ticket-field">Employee ID: <span id="employeeID"></span></div>
+        <div class="ticket-field">First Name: <span id="userFirstName"></span></div>
+        <div class="ticket-field">Last Name: <span id="userLastName"></span></div>
+        <div class="ticket-field">Problem Description: <span id="problemDescription"></span></div>
+        <div class="ticket-field">Status: <span id="status"></span></div>
+        <div class="ticket-field">Response: <span id="response"></span></div>
+    </div>
+
+    <!-- Link to external JavaScript file -->
+    <script src="getTicket.js"></script>
+</body>
+</html>
