@@ -1,41 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>JScript IT Support</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <div class="container">
-    <h1>IT Support Request</h1>
+<canvas id="myCanvas" width="410" height="270" style="border: 1px solid gray"></canvas >
 
-    <!-- Support Ticket Form -->
-    <form id="supportForm" onsubmit="event.preventDefault(); handleSubmit();">
-      <label for="name">Name:</label>
-      <input type="text" id="name" required>
-
-      <label for="email">Email:</label>
-      <input type="email" id="email" required>
-
-      <label for="issue">Describe Your Issue:</label>
-      <textarea id="issue" rows="5" required></textarea>
-
-      <button type="submit">Submit Ticket</button>
-    </form>
-
-    <div id="ticketSummary" class="output"></div>
-
-    <hr>
-
-    <!-- Search Section -->
-    <h2>Search Tickets</h2>
-    <input type="text" id="searchQuery" placeholder="Enter name or ticket ID">
-    <button onclick="handleSearch()">Search</button>
-
-    <div id="searchResults" class="output"></div>
-  </div>
-
-  <script src="main.js"></script>
-</body>
-</html>
+<div style="display:none;">
+   <img src="https://resources.zybooks.com/WebProgramming/heartsv1.png" id="hearts" alt="Heart">
+   <img src="https://resources.zybooks.com/WebProgramming/clubsv1.png" id="clubs" alt="Clubs">
+   <img src="https://resources.zybooks.com/WebProgramming/diamondsv1.png" id="diamonds" alt="Diamonds">
+   <img src="https://resources.zybooks.com/WebProgramming/spadesv1.png" id="spades" alt="Spades">
+</div>
