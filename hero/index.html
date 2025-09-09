@@ -1,0 +1,35 @@
+<select id="heroSelect">
+  <option>Super Bacon</option>
+  <option>Flat-Man</option>
+  <option>Mighty Woman</option>
+  <option>Captain Marvelous</option>
+</select>
+
+<select id="villainSelect">
+  <option>The Jokester</option>
+  <option>Magnet Man</option>
+  <option>Lex Loner</option>
+  <option>Thankos</option>
+</select>
+
+<p id="winner">Winner: </p>
+<script>
+  const heroSelect = document.getElementById('heroSelect');
+  const villainSelect = document.getElementById('villainSelect');
+  const winnerDisplay = document.getElementById('winner');
+
+  function determineWinner() {
+	const hero = heroSelect.value;
+	const villain = villainSelect.value;
+
+  if (hero === 'Super Bacon' && villain === 'The Jokester') {
+    winnerDisplay.textContent = 'Winner: Super Bacon';
+  } else if (hero === 'Flat-Man' && villain === 'Magnet Man') {
+    winnerDisplay.textContent = 'Winner: Flat-Man';
+  } else if (hero === 'Mighty Woman' && villain === 'Lex Loner') {
+    winnerDisplay.textContent = 'Winner: Mighty Woman';
+  } else if (hero === 'Captain Marvelous' && villain === 'Thankos') {
+    winnerDisplay.textContent = 'Winner: Captain Marvelous';
+  } else {
+    winnerDisplay.textContent = 'Winner: Unknown';
+  }
