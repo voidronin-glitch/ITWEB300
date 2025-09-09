@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tickets>
+  <ticket>
+    <requestDate>2025-09-02</requestDate>
+    <employeeID>123</employeeID>
+    <firstName>John</firstName>
+    <lastName>Doe</lastName>
+    <problem>Computer not starting</problem>
+    <status>Open</status>
+    <response>Pending support team review</response>
+  </ticket>
+  <ticket>
+    <requestDate>2025-08-30</requestDate>
+    <employeeID>456</employeeID>
+    <firstName>Jane</firstName>
+    <lastName>Smith</lastName>
+    <problem>Forgot password</problem>
+    <status>Closed</status>
+    <response>Password reset link sent</response>
+  </ticket>
+  <ticket>
+    <requestDate>2025-08-28</requestDate>
+    <employeeID>123</employeeID>
+    <firstName>John</firstName>
+    <lastName>Doe</lastName>
+    <problem>Email not syncing</problem>
+    <status>In Progress</status>
+    <response>Technician assigned</response>
+  </ticket>
+</tickets>
